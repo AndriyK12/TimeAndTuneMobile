@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744999638814",
+    "project_id": "timeandtunemobile",
+    "storage_bucket": "timeandtunemobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744999638814:android:d2d8530ec07ba9c6191b0f",
+        "android_client_info": {
+          "package_name": "com.example.timeandtune"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsU7mSZwtw6JdfGSqcwruUBNwoTtXkjzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
