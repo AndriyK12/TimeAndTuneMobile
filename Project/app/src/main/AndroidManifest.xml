@@ -13,7 +13,13 @@
         android:theme="@style/Theme.TimeAndTune"
         tools:targetApi="31">
         <activity
+            android:name=".Presentation.Auth.SignUp"
+            android:exported="false" />
+        <activity
             android:name=".Presentation.Navigation.MainPage"
+            android:exported="false" />
+        <activity
+            android:name=".Presentation.Auth.SignIn"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

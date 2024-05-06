@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presentation.Authentication.SignIn"
+    tools:context=".Presentation.Auth.SignIn"
     android:background="@color/background">
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,6 +99,7 @@
             app:iconSize="40dp"
             app:iconTint="@color/white"/>
         <TextView
+            android:id="@+id/createAccountButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

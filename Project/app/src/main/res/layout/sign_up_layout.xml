@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presentation.Authentication.SignUp"
+    tools:context=".Presentation.Auth.SignUp"
     android:background="@color/background">
     <LinearLayout
         android:layout_width="match_parent"
@@ -156,23 +156,24 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/signInButton"
+            android:id="@+id/signUpButton"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginTop="80sp"
+            android:layout_marginTop="50sp"
             android:backgroundTint="@color/blue"
-            android:text="Sign in"
+            android:text="Sign Up"
             android:fontFamily="@font/inter_semibold"
             android:textColor="@color/white"
             android:textSize="20dp"
             app:iconSize="40dp"
             app:iconTint="@color/white"/>
         <TextView
+            android:id="@+id/signInButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/inter"
-            android:text="Create an account"
+            android:text="Already have account? Sign in!"
             android:textColor="@color/white"
             android:textSize="20dp" />
 

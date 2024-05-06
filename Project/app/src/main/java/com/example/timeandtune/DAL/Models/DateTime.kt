@@ -3,7 +3,7 @@ package com.example.timeandtune.DAL.Models
 data class DateTime(
     val date: Date,
     val time: Time
-) {
+): java.io.Serializable  {
     override fun toString(): String {
         return "$date $time"
     }
