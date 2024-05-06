@@ -3,13 +3,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Presentation.Navigation.HomeFragment"
-    android:background="@color/white">
+    android:background="#141122">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="38sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="89sp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="T&amp;T"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginLeft="6sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:text="Today"
+                android:textColor="#FFFFFF"
+                android:alpha="0.18"
+                android:textSize="15sp"
+                android:layout_marginTop="3sp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:text="Week"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="3sp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:text="Month"
+                android:textColor="#FFFFFF"
+                android:alpha="0.18"
+                android:textSize="15sp"
+                android:layout_marginTop="3sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="146sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="home" />
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="94sp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="80sp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/inter_semibold"
+            android:text="New task"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:icon="@drawable/plus_icon"
+            app:iconSize="22sp"
+            app:iconTint="@color/white"
+            android:layout_marginBottom="20sp"/>
+    </RelativeLayout>
 
 
 </FrameLayout>
