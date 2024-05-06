@@ -3,13 +3,17 @@ package com.example.timeandtune.Presentation.Navigation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import com.example.timeandtune.DAL.DataBaseAdapter
+import com.example.timeandtune.DAL.CloudDataBase
+import com.example.timeandtune.DAL.LocalDataBase
+import com.example.timeandtune.DAL.Models.Date
+import com.example.timeandtune.DAL.Models.DateTime
+import com.example.timeandtune.DAL.Models.Task
+import com.example.timeandtune.DAL.Models.Time
 import com.example.timeandtune.R
 import com.example.timeandtune.databinding.MainPageLayoutBinding
 
 class MainPage : AppCompatActivity() {
-    private lateinit var dataBaseAdapter: DataBaseAdapter
+    private lateinit var dataBaseAdapter: LocalDataBase
     private lateinit var binding: MainPageLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +22,8 @@ class MainPage : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         replaceFragment(HomeFragment())
+
+
 
         binding.navigationMenu.setOnItemSelectedListener{menuItem ->
             when (menuItem.itemId) {
