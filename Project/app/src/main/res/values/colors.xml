@@ -5,4 +5,5 @@
     <color name="background">#141122</color>
     <color name="backgroundTextEdit">#242131</color>
     <color name="blue">#281486</color>
+    <color name="percentageGreen">#1db55f</color>
 </resources>
