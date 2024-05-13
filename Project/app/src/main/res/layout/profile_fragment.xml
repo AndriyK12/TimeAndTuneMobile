@@ -3,12 +3,375 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#141122"
     tools:context=".Presentation.Navigation.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="profile" />
+        android:layout_height="40sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="38sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="89sp">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="T&amp;T"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="6sp"/>
+    </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="553dp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="116sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginBottom="30sp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/usernameCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#272533"
+                android:layout_marginBottom="15sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:contentDescription="user_icon"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/user" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40sp"
+                        android:background="#FFF"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginTop="5sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Your username:"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Username"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/emailCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#272533"
+                android:layout_marginBottom="15sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:contentDescription="mail"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/mail_icon" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40sp"
+                        android:background="#FFF"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginTop="5sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Your email:"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="example@gmail.com"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/pointsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#272533">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:contentDescription="point"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/point_icon" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40sp"
+                        android:background="#FFF"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginRight="5sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginTop="5sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Your amount of points:"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="145"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="15sp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settingsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#272533"
+                android:layout_marginBottom="100sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Remove notifications"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="15sp"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:layout_marginLeft="70sp">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switchcompat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="290dp"
+                        android:layout_height="1sp"
+                        android:background="#FFF"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="30sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginBottom="5sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Play sounds on\nbackground"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="15sp"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginLeft="110sp">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switchcompat1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="290dp"
+                        android:layout_height="1sp"
+                        android:background="#FFF"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="30sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginBottom="5sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="Change password"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#FFF"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="15sp"/>
+
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="1sp"
+                            android:layout_marginLeft="85sp"
+                            android:layout_marginTop="1sp"
+                            android:contentDescription="user_icon"
+                            android:text=""
+                            android:background="@null"
+                            android:drawableLeft="@drawable/further_icon"
+                            android:backgroundTint="#272533"
+                            android:onClick="onButtonClick" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/signOutButton"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="80sp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Sign out"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
 </FrameLayout>
