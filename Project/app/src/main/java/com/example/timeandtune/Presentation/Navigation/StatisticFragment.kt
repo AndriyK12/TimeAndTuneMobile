@@ -1,60 +1,94 @@
 package com.example.timeandtune.Presentation.Navigation
 
+import android.graphics.Color
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.timeandtune.R
+import com.example.timeandtune.databinding.StatisticFragmentBinding
+import com.github.mikephil.charting.components.AxisBase
+import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IAxisValueFormatter
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.github.mikephil.charting.utils.MPPointF
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StatisticFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StatisticFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: StatisticFragmentBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.statistic_fragment, container, false)
+        _binding = StatisticFragmentBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        val lineChart = binding.chart
+
+        val entries = ArrayList<Entry>()
+        entries.add(Entry(1f, 50f))
+        entries.add(Entry(2f, 100f))
+        entries.add(Entry(3f, 80f))
+        entries.add(Entry(4f, 60f))
+        entries.add(Entry(5f, 50f))
+        entries.add(Entry(6f, 60f))
+        entries.add(Entry(7f, 50f))
+
+        val dataSet = LineDataSet(entries, "Label")
+        dataSet.color = Color.parseColor("#34355e")
+        dataSet.setDrawFilled(true)
+        dataSet.fillColor = Color.parseColor("#34355e")
+        dataSet.fillAlpha = 140
+        dataSet.setDrawValues(false)
+
+        val lineData = LineData(dataSet)
+        lineChart.data = lineData
+
+        val leftAxis: YAxis = lineChart.axisLeft
+        leftAxis.setDrawGridLines(false)
+
+        val xAxis: XAxis = lineChart.xAxis
+        xAxis.valueFormatter = MyXAxisValueFormatter(entries)
+
+        val rightAxis: YAxis = lineChart.axisRight
+        rightAxis.isEnabled = false
+
+        val legend: Legend = lineChart.legend
+        legend.isEnabled = false
+
+        lineChart.description.isEnabled = false
+
+
+        lineChart.invalidate()
+        return view
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StatisticFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StatisticFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private class MyXAxisValueFormatter(private val entries: List<Entry>) : IAxisValueFormatter {
+        val daysOfWeek = listOf("", "", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+        override fun getFormattedValue(value: Float, axis: AxisBase?): String {
+            val index = value.toInt()
+            return if (index >= 0 && index < entries.size) {
+                daysOfWeek[entries[index].x.toInt()]
+            } else {
+                "Sun"
             }
+        }
     }
 }
