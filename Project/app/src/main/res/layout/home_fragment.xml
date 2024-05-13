@@ -79,7 +79,7 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/signInButton"
+            android:id="@+id/newTaskButton"
             android:layout_width="match_parent"
             android:layout_height="70sp"
             android:layout_alignParentBottom="true"
