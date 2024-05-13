@@ -1,14 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#141122"
     tools:context=".Presentation.Navigation.FocusFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="focus" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="38sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="44sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="6sp"
+                android:layout_marginTop="14sp"
+                android:layout_weight="1"
+                android:text="T&amp;T"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/DNDButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/inter_semibold"
+                android:text="DND"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:icon="@drawable/dnd_icon"
+                app:iconSize="35sp"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="2sp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cafeButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cafe_image" />
+
+                <ImageView
+                    android:id="@+id/rainButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35sp"
+                    android:background="@drawable/rain_image" />
+
+                <ImageView
+                    android:id="@+id/windButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35sp"
+                    android:background="@drawable/wind_image" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2sp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/campfireButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/campfire_image" />
+
+                <ImageView
+                    android:id="@+id/trainButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35sp"
+                    android:background="@drawable/train_image" />
+
+                <ImageView
+                    android:id="@+id/birdsButton"
+                    android:layout_width="133sp"
+                    android:layout_height="133sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35sp"
+                    android:background="@drawable/birds_image" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="20sp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Stop"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            app:icon="@drawable/stop_image"
+            app:iconSize="32sp"
+            app:iconTint="@color/white" />
+
+    </RelativeLayout>
 
 </FrameLayout>

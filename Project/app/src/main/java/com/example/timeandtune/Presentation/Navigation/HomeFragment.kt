@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.timeandtune.DAL.DataBaseAdapter
+import com.example.timeandtune.DAL.LocalDataBase
 import com.example.timeandtune.DAL.Models.Task
 import com.example.timeandtune.DAL.Models.TasksAdapter
 import com.example.timeandtune.R
 
 class HomeFragment : Fragment() {
-    private lateinit var dbAdapter: DataBaseAdapter
+    private lateinit var dbAdapter: LocalDataBase
 
     private lateinit var tasksRecyclerView: RecyclerView
     private lateinit var tasksList: List<Task>
@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.home_fragment, container, false)
 
-        dbAdapter = DataBaseAdapter(requireContext())
+        dbAdapter = LocalDataBase(requireContext())
 
         tasksList = dbAdapter.getTasks()
 
