@@ -23,7 +23,21 @@ class MainPage : AppCompatActivity() {
         setContentView(view)
         replaceFragment(HomeFragment())
 
+        dataBaseAdapter = LocalDataBase(this)
+        val cloudDataBase = CloudDataBase()
 
+//        dataBaseAdapter.addTask(Task(
+//            cloudDataBase.getUniqueIdForTask(),
+//            "Зробити завдання",
+//            "Бажано сьогодні",
+//            "2024 07 22 14 30",
+//            "2024 07 22 14 30",
+//            "2024 January 22 14 30",
+//            1,
+//            false,
+//            "14 30"
+//            )
+//        )
 
         binding.navigationMenu.setOnItemSelectedListener{menuItem ->
             when (menuItem.itemId) {

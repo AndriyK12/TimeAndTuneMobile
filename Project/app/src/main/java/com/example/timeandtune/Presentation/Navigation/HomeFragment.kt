@@ -36,11 +36,11 @@ class HomeFragment : Fragment() {
 
         tasksList = dbAdapter.getTasks()
 
-        tasksRecyclerView = binding.recyclerView
-        tasksRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        tasksRecyclerView.setHasFixedSize(true)
+        //tasksRecyclerView = binding.recyclerView
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.setHasFixedSize(true)
 
-        tasksRecyclerView.adapter = TasksAdapter(tasksList)
+        binding.recyclerView.adapter = TasksAdapter(tasksList, requireContext())
 
         binding.newTaskButton.setOnClickListener {
             val intent = Intent(requireContext(), AddTask::class.java)
