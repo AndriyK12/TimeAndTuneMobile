@@ -4,12 +4,12 @@ data class Task(
     val id: String,
     val name: String,
     val description: String,
-    val dateOfCreation: DateTime,
-    val expectedFinishTime: DateTime,
-    val finishTime: DateTime,
+    val dateOfCreation: String,
+    val expectedFinishTime: String,
+    val finishTime: String,
     val priority: Int,
     val completed: Boolean,
-    val executionTime: Time
+    val executionTime: String
 ): java.io.Serializable {
     fun getHasMap(): Map<String, Any> {
         return mapOf(

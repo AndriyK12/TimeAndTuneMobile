@@ -49,12 +49,12 @@ class LocalDataBase(private val context: Context): DataBaseHelper{
                         id,
                         name,
                         description,
-                        DateTime.parseDateTime(dateOfCreation),
-                        DateTime.parseDateTime(expectedFinishTime),
-                        DateTime.parseDateTime(finishTime),
+                        dateOfCreation,
+                        expectedFinishTime,
+                        finishTime,
                         priority,
                         completed==1,
-                        Time.parseTime(executionTime)
+                        executionTime
                     )
                 )
             }while(cursor.moveToNext())
